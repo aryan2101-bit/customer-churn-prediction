@@ -19,7 +19,7 @@ import pickle
 **
 """
 
-df=pd.read_csv('/content/drive/MyDrive/WA_Fn-UseC_-Telco-Customer-Churn.csv')
+df=pd.read_csv('E:\customer-churn-prediction\WA_Fn-UseC_-Telco-Customer-Churn.csv')
 df.shape
 
 df.head()
@@ -242,8 +242,7 @@ with open("/content/drive/MyDrive/encoders.pkl","rb") as f:
 for column,encoder in encoders.items():
   input_data_df[column]=encoder.transform(input_data_df[column])
 
-from google.colab import drive
-drive.mount('/content/drive')
+
 
 print(input_data_df)
 
